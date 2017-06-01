@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
           <button onClick={this.handleOnClick.bind(this)}>Click</button>
-          <p> {this.props.items.length}</p>
+          <p>{this.props.items.length}</p>
       </div>
     );
   }
@@ -20,6 +20,6 @@ const mapStateToProps = (state) => {
   return { items: state.items }
 }
 
-connect(mapStateToProps) (App)
+const connectedComponent = connect(mapStateToProps)(App)
 
-export default App;
+export default connectedComponent
