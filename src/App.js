@@ -20,6 +20,4 @@ const mapStateToProps = (state) => {
   return { items: state.items }
 }
 
-const connectedComponent = connect(mapStateToProps)(App)
-
-export default connectedComponent
+export default connect(mapStateToProps)(App)
